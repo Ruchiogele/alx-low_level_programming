@@ -1,16 +1,15 @@
 #include <stdio.h>
-
 int main(void)
 {
-	char i  = 'a';
+	char ch = 'a';
 
-	while (i <= 'z')
+	while (ch <= 'z')
 	{
-		if (i != 'e' && i != 'q')
+		if (ch != 'e' && ch != 'q')
 		{
-			putchar(i);
+			putchar(ch);
 		}
-		i++;
+		ch++;
 	}
 	putchar('\n');
 	return (0);

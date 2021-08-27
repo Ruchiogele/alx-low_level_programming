@@ -1,17 +1,12 @@
 #include <stdio.h>
-
 int main(void)
 {
-  char x;
+	int ch;
 
-  for(x = 'a';  x <= 'z'; x++)
-    {
-      putchar(x);
-    }
-  for(x = 'A';  x <= 'Z'; x++)
-    {
-      putchar(x);
-    }
-        putchar('\n');
+	for (ch = 'a'; ch <= 'z'; ch++)
+		putchar(ch);
+	for (ch = 'A'; ch <= 'Z'; ch++)
+		putchar(ch);
+	putchar('\n');
 	return (0);
 }

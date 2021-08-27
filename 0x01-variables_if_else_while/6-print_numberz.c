@@ -1,13 +1,14 @@
 #include <stdio.h>
-
 int main(void)
 {
-	int i = 0;
+	int n;
 
-	for (i = 0; i < 10; i++)
+	for (n = 48; n < 58; n++)
 	{
-		putchar(i);
+		putchar(n);
 	}
 	putchar('\n');
-        return (0);
+	return (0);
 }
+
+
