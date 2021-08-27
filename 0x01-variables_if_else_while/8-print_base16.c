@@ -8,18 +8,18 @@
  */
 int main(void)
 {
-	char a;
-	char ch = '0';
+	char c;
+	char d = '0';
 
-	while (ch <= '9')
+	while (d <= '9')
 	{
-		putchar(ch);
-		ch++;
+		putchar(d);
+		d++;
 	}
 
-	for (x = 'a'; x <= 'f'; x++)
+	for (c = 'a'; c <= 'f'; c++)
 	{
-		putchar(x);
+		putchar(c);
 	}
 
 	putchar('\n');
