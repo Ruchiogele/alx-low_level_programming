@@ -1,4 +1,10 @@
+#include <stdlib.h>
 #include <stdio.h>
+/**
+ * main - entry block
+ * Description: Displays the alphabet in lower and upper case
+ * Return: 0
+ */
 int main(void)
 {
 	int ch;

@@ -1,10 +1,21 @@
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+/**
+ * main - Contains the running code
+ * Description: Display a single digit numbers
+ * Return: 0
+ */
 int main(void)
 {
-	int n;
+	char i = '0';
 
-	for (n = 0; n < 10; n++)
-		printf("%d", n);
-	printf("\n");
+	while (i <= '9')
+	{
+		putchar(i);
+		i++;
+	}
+
+	putchar('\n');
 	return (0);
 }

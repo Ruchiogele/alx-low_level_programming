@@ -1,14 +1,20 @@
 #include <stdio.h>
+/**
+ * main - main block
+ * Description: Displays all single digit numbers of base 10
+ * starting from 0, followed by a new line.
+ * Return: 0
+ */
 int main(void)
 {
-	int n;
+	int i = 0;
 
-	for (n = 48; n < 58; n++)
+	while (i < 10)
 	{
-		putchar(n);
+		putchar(48 + i);
+		i++;
 	}
+
 	putchar('\n');
 	return (0);
 }
-
-

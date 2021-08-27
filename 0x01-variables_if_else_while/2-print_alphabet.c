@@ -1,4 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+/**
+* main - Contains the code to run
+* Description: Displays the alphabet
+* Return: 0
+*/
 int main(void)
 {
 	char ch;
