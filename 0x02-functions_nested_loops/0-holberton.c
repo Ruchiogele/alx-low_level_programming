@@ -2,17 +2,18 @@
 
 /**
  * main - Entry point
- * main -  prints Holberton, followed by a new line
+ *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	char ch  = "Holberton";
+	char *sh = "Holberton";
 
-	while (ch)
+	while (*sh)
 	{
-		_putchar(*ch);
-		ch++;
+		_putchar(*sh);
+		sh++;
 	}
 	_putchar('\n');
 
