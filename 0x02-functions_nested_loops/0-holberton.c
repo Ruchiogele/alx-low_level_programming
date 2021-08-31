@@ -1,22 +1,21 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * main -  prints Holberton, followed by a new line
- * Return: Always 0 (Success)
+ * main - entry point
+ *
+ * Return: always 0 (success)
  */
 
 int main(void)
 {
-	_putchar('H');
-	_putchar('o');
-	_putchar('l');
-	_putchar('b');
-	_putchar('e');
-	_putchar('r');
-	_putchar('t');
-	_putchar('o');
-	_putchar('n');
-	_putchar('\n');
+	char x[8] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
+	unsigned int y;
 
+	for (y = 0; y < sizeof(x); y++)
+	{
+		_putchar(x[y]);
+	}
+	_putchar('\n');
 	return (0);
 }
