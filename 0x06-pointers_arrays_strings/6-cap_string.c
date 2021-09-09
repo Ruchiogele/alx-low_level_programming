@@ -2,53 +2,31 @@
 #include <stdio.h>
 
 /**
- * isLower - determines whether ascii is lowercase
- * @c: character
- * Return: 1 if true, 0 if false
- */
-int isLower(char c)
-{
-	return (c >= 97 && c <= 122);
-}
-
-/**
- * isDelimiter - determines whether ascii is a delimiter
- * @c: character
- * Return: 1 if true, 0 if false
- */
-int isDelimiter(char c)
-{
-	int i;
-	char delimiter[] = " \t\n,.!?\"(){}";
-
-	for (i = 0; i < 12; i++)
-		if (c == delimiter[i])
-			return (1);
-	return (0);
-}
-
-/**
  * cap_string - capitalizes all words of a string
  * @s: input string
- * Return: string with capitalized words
+ * Return: char value
  */
+
 char *cap_string(char *s)
 {
-	char *ptr = s;
-	int foundDelimit = 1;
+	int a = 0, i;
+	int cspc = 13;
+	char spc[] = {32, '\t', '\n', 44, ';', 46, '!', '?', '"', '(', ')', '{', '}'};
 
-	while (*s)
+	while (s[a])
 	{
-		if (isDelimiter(*s))
-			foundDelimit = 1;
-		else if (isLower(*s) && foundDelimit)
+		i = 0;
+
+		while (i < cspc)
 		{
-			*s -= 32;
-			foundDelimit = 0;
+			if ((a == 0 || s[a - 1] == spc[i]) && (s[a] >= 97 && s[a] <= 122))
+				s[a] -= 32;
+
+			i++;
 		}
-		else
-			foundDelimit = 0;
-		s++;
+
+		a++;
 	}
-	return (ptr);
+
+	return (s);
 }
