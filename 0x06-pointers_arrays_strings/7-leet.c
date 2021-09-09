@@ -2,28 +2,28 @@
 
 /**
  * leet - encodes a string into 1337
- * @a: String
+ * @c: String
  * Return: string that is encoded
  */
 
-char *leet(char *a)
+char *leet(char *c)
 {
-	char *cp = a;
+	char *cp = c;
 	char key[] = {'A', 'E', 'O', 'T', 'L'};
 	int value[] = {4, 3, 0, 7, 1};
 	unsigned int i;
 
-	while (*a)
+	while (*c)
 	{
 		for (i = 0; i < sizeof(key) / sizeof(char); i++)
 		{
-		
-			if (*a == key[i] || *a == key[i] + 32)
+			/*32 is the difference between lower case letters and apper case letters*/
+			if (*c == key[i] || *c == key[i] + 32)
 			{
-				*a = 48 + value[i];
+				*c = 48 + value[i];
 			}
 		}
-		a++;
+		c++;
 	}
 
 	return (cp);
