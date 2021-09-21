@@ -3,10 +3,10 @@
 
 /**
   * free_grid - ...
-  * @grid: ...
-  * @height: ...
+  * @grid: address of the two dimensional grid
+  * @height: height of the grid
   *
-  * Return: ...
+  * Return: 0.
   */
 void free_grid(int **grid, int height)
 {
