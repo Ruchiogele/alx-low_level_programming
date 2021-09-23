@@ -2,38 +2,51 @@
 #include <stdlib.h>
 
 /**
- * string_nconcat - function that concatenates two strings.
- * @s1: the first string
- * @s2: the second string
- * @n: the second string length
- * Return: concatenated string
- */
-
+  * string_nconcat - ...
+  * @s1: ...
+  * @s2: ...
+  * @n: ...
+  *
+  * Return: ...
+  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *string;
-	unsigned int i = 0;
-	unsigned int j = 0;
+	unsigned int i = 0, j = 0, k = 0, l = 0;
+	char *str;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	string = malloc(sizeof(s1) + n + 1);
-	if (string == NULL)
+
+	while (s1[i])
+		i++;
+
+	while (s2[k])
+		k++;
+
+	if (n >= k)
+		l = i + k;
+	else
+		l = i + n;
+
+	str = malloc(sizeof(char) * l + 1);
+	if (str == NULL)
 		return (NULL);
-	while (s1[i] != '\0')
+
+	k = 0;
+	while (j < l)
 	{
-		string[i] = s1[i];
-		i++;
-	}
-	while (j < n)
-	{
-		string[i] = s2[j];
-		i++;
+		if (j <= i)
+			str[j] = s1[j];
+
+		if (j >= i)
+		{
+			str[j] = s2[k];
+			k++;
+		}
 		j++;
 	}
-	string[i] = '\0';
-
-	return (string);
+	str[j] = '\0';
+	return (str);
 }
